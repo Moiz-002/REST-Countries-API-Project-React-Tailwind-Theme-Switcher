@@ -1,12 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import data from "/data.json";
+import { useNavigate } from "react-router-dom";
 import { FiArrowLeft } from "react-icons/fi";
 
 const CountryDetails = ({ country }) => {
   const borderCountries = country.borders?.map((code) =>
     data.find((item) => item.alpha3Code === code)
   );
+  const navigate = useNavigate();
+
 
   return (
     <article
@@ -15,14 +18,14 @@ const CountryDetails = ({ country }) => {
     >
       <div className="mx-auto max-w-7xl flex flex-col gap-12">
 
-        <Link
-          to="/"
+        <button
+           onClick={() => navigate(-1)}
           className="flex items-center gap-2 shadow-md w-fit px-6 py-2 rounded-md bg-elements text-text hover:opacity-80 transition"
           aria-label="Go back to home"
         >
           <FiArrowLeft size={18} aria-hidden="true" />
           Back
-        </Link>
+        </button>
 
         <div className="flex flex-col lg:flex-row lg:items-center gap-16">
 
