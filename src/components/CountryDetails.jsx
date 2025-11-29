@@ -11,7 +11,7 @@ const CountryDetails = ({ country }) => {
   return (
     <article
       aria-label={`Details about ${country.name}`}
-      className="bg-bg min-h-screen text-text px-6 lg:px-20 py-10"
+      className="min-h-screen text-text px-6 lg:px-20 py-10"
     >
       <div className="mx-auto max-w-7xl flex flex-col gap-12">
 
