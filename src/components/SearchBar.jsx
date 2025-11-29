@@ -15,7 +15,7 @@ const SearchBar = ({ search, setSearch }) => {
         value={search}
         aria-label="Search for a country"
         placeholder="Search for a country..."
-        className="w-full bg-elements outline-none text-text placeholder:text-gray-500"
+        className="w-full bg-elements outline-none text-text placeholder:text-gray-300"
         onChange={(e) => setSearch(e.target.value)}
       />
     </div>
